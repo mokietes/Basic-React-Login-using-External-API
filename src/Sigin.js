@@ -96,3 +96,14 @@ export default function Signin() {
               label="Email Address"
               onChange={e => setUserName(e.target.value)}
             />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="password"
+              name="password"
+              label="Password"
+              type="password"
+              onChange={e => setPassword(e.target.value)}
+            />
