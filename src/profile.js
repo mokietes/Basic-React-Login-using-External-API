@@ -44,5 +44,13 @@ export default function Profile() {
     localStorage.removeItem("user");
     window.location.href = "/";
   };
-  return <div className={classes.root}></div>;
+  return (
+    <div className={classes.root}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" className={classes.title}></Typography>
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
 }
