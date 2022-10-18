@@ -6,9 +6,11 @@ import Profile from "./Profile";
 
 function App() {
   const token = localStorage.getItem("accessToken");
-}
 
-function App() {
+  if (!token) {
+    return <Signin />;
+  }
+
   return (
     <div className="wrapper">
       <BrowserRouter>
