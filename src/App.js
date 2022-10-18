@@ -1,6 +1,6 @@
 import React from "react";
 //import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Signin from "./Signin";
 import Profile from "./Profile";
 
@@ -13,16 +13,12 @@ function App() {
 
   return (
     <div className="wrapper">
-      <BrowserRouter>
+      <Router>
         <Routes>
-          <Route path="/profile">
-            <Profile />
-          </Route>
-          <Route path="/">
-            <Profile />
-          </Route>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/" element={<Profile />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
