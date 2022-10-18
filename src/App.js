@@ -5,6 +5,10 @@ import Signin from "./Signin";
 import Profile from "./Profile";
 
 function App() {
+  const token = localStorage.getItem("accessToken");
+}
+
+function App() {
   return (
     <div className="wrapper">
       <BrowserRouter>
