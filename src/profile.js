@@ -48,9 +48,32 @@ export default function Profile() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h6" className={classes.title}></Typography>
+          <Typography variant="h6" className={classes.title}>
+            Profile
+          </Typography>
+          <div>
+            <IconButton onClick={handleMenu} color="inherit">
+              <Avatar src={user.avatar} />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleLogout}>Logout</MenuItem>
+            </Menu>
+          </div>
         </Toolbar>
       </AppBar>
+      <Card className={classes.root} variant="outlined">
+        <CardContent>
+          <Avatar src={user.avatar} className={classes.large} />
+          <Typography variant="h5">
+            Welcome {user.fname} {user.lname}
+          </Typography>
+        </CardContent>
+      </Card>
     </div>
   );
 }
